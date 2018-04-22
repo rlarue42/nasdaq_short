@@ -13,8 +13,8 @@ df_stock_data <-  read_csv(file = "_raw_data/df_stock_data_2018-04-19.csv")
 
 # create lists ------------------------------------------------------------
 
-lst_key_ratios <- df_key_ratios %>% pull(sub.section) %>% unique()
-lst_stocks     <- df_key_ratios %>% pull(symbol) %>% unique()
+df_stock_data %>% colnames()
+df_stock_data$ratio %>% unique()
 
 
 # from long to  wide format 

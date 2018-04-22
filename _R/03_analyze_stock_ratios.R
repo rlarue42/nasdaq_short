@@ -46,3 +46,20 @@ df_profitability %>% map(Profitability)
 
 
 stats <- df_financials %>% select_if(is.numeric) %>% skimr::skim()
+
+
+
+# goals! ------------------------------------------------------------------
+
+*Most leveraged (short term)
+*Declining sales
+*stock prices above trend
+
+
+
+
+# actionable steps --------------------------------------------------------
+
+
+
+
