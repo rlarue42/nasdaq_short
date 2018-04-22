@@ -17,8 +17,8 @@ chrkt <- "\\$"
 
 lst_nasdaq_filtered <- lst_nasdaq %>% 
         filter(sector == "Technology") %>% 
-        mutate(market.cap = str_replace_all(market.cap, "M",""),
-               market.cap = str_replace_all(market.cap, "B",""),
+        mutate(market.cap = str_replace_all(market.cap, "M","000000"),
+               market.cap = str_replace_all(market.cap, "B","000000000"),
                market.cap = str_replace_all(market.cap, chrkt,""),
                market.cap = as.integer(market.cap)) %>% 
         filter(market.cap > 500) # now just 47 stocks!
@@ -36,3 +36,6 @@ df_stock_data <- df_database %>% map_df(unnest,stock.prices) %>% gather(ratio, v
 
 write_csv(df_key_ratios, path = paste0("_raw_data/df_key_ratios_",Sys.Date(),".csv"))
 write_csv(df_stock_data, path = paste0("_raw_data/df_stock_data_",Sys.Date(),".csv"))
+
+
+
