@@ -92,7 +92,7 @@ df_val_alg_final <- df_val_alg_stock %>%
                to_index_rank = ntile(to_index,10)) %>% 
         ungroup() %>% 
         group_by(symbol) %>% 
-        mutate(val_alg_score = sum(to_index_rank)) %>% 
+        mutate(val_alg_score = mean(to_index_rank,na.rm = T)) %>% 
         arrange(-val_alg_score)
         
 
