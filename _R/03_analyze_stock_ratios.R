@@ -51,9 +51,12 @@ stats <- df_financials %>% select_if(is.numeric) %>% skimr::skim()
 
 # goals! ------------------------------------------------------------------
 
-*Most leveraged (short term)
-*Declining sales
-*stock prices above trend
+*Most leveraged (short term debt) - is there a way to see maturity date and interest rate? Convertibles?
+*Declining sales growth
+*stock prices above trend in peer group (software vs hardware etc.)
+*ROE (low ROE on a leveraged company spells bad news, poor allocation of capital by management)
+*Support levels - 10-20-50-100 moving day averages - for visualization purposes
+*Intangible assets and R&D
 
 
 
